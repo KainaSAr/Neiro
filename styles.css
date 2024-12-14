@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Занять всю высоту экрана */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    height: 10%; /* Занять  10% высоты экрана */
+}
+
+.logo {
+    font-size: 32px; /* Уменьшенный размер шрифта для мобильных устройств */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.container {
+    flex: 1; /* Занять оставшееся пространство */
+    display: flex;
+    flex-direction: column; /* Расположение контента вертикально */
+}
+
+.content {
+    flex: 1; /* Занять оставшееся пространство */
+    display: flex;
+    flex-direction: column; /* Расположение контента вертикально */
+    padding: 10px; /* Уменьшенные отступы для мобильных устройств */
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 80%; /* Занять 80% высоты экрана */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    background-color: black; /* Устанавливаем черный фон для диалогового окна */
+    color: white; /* Устанавливаем белый цвет текста */
+}
+
+.input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    flex: 1; /* Занять оставшееся пространство */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.typing-indicator {
+    width: 90%; /* Занять 90% ширины */
+    text-align: center; /* Центрируем текст */
+    color: #ccc; /* Цвет текста для индикатора */
+    margin: 5px 0; /* Отступы сверху и снизу */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Автоматическая высота для заголовка */
+        padding: 10px; /* Увеличенные отступы для заголовка */
+    }
+
+    .logo {
+        font-size: 24px; /* Уменьшенный размер шрифта для мобильных устройств */
+    }
+
+    .chat-box {
+        height: 70%; /* Уменьшение высоты диалогового окна для мобильных устройств */
+    }
+
+    .input-container {
+        flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+    }
+
+    input[type=" text"] {
+        margin-bottom: 10px; /* Отступ между полем ввода и кнопкой */
+    }
+
+    button {
+        width: 100%; /* Кнопка занимает всю ширину */
+    }
+}
